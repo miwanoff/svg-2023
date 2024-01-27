@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #load {
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            z-index: 9999;
+            background: url(./images/logo.svg) no-repeat center center rgba(0, 0, 0, 0.25)
+        }
+    </style>
+</head>
+
+<body>
+    <div id="load"></div>
+    <div id="contents">
+        Вміст сторінки
+    </div>
+    <script>
+        document.onreadystatechange = function () {
+            let state = document.readyState;
+            if (state == "interactive") {
+                document.getElementById("contents").style.visibility = "hidden";
+                document.getElementById("load").style.visibility = "visible";
+            } else if (state == "complete") {
+                setTimeout(function () {
+                    document.getElementById("load").style.visibility = "hidden";
+                    document.getElementById("contents").style.visibility = "visible";
+                }, 2000);
+            }
+        };
+    </script>
+</body>
+
+</html>
