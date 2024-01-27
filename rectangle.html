@@ -5,8 +5,8 @@
 	<script type='text/javascript'>
 		let canvas;
 		let context;
-		let squarePosition_x = 10;
-		let squarePosition_y = 0;
+		let squarePositionX = 10;
+		let squarePositionY = 10;
 		
 	 	window.onload = function() {
 		   // Определение контекста рисования
@@ -23,13 +23,13 @@
 		   // что мы не рисуем часть уже нарисованного содержимого холста
 		   context.beginPath();
 		   // Рисуем квадратик размером 10x10 пикселов в текущей позиции
-		   context.rect(squarePosition_x, squarePosition_y, 10, 10);
+		   context.rect(squarePositionX, squarePositionY, 10, 10);
 		   context.lineStyle = "#109bfc";
 		   context.lineWidth = 1;
 		   context.stroke();
 		   // Перемещаем квадратик вниз на 1 пиксел (где он будет
 		   // прорисован в следующем кадре)
-		   squarePosition_y += 1;
+		   squarePositionX += 1;
 		   // Рисуем следующий кадр через 20 миллисекунд
 		   setTimeout("drawFrame()", 20);
 	   	}
