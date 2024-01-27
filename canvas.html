@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <canvas id="canvas_id" width="200" height="200" style="border:dashed #ccc;"></canvas>
+    <script>
+        let canvas = document.getElementById("canvas_id");
+        let context = canvas.getContext("2d");
+        context.beginPath();
+        context.fillStyle = "#ff0";
+        context.strokeStyle = 'green';
+        context.fillRect(30, 125, 10, 10);
+        context.strokeRect(30, 125, 10, 10);
+    </script>
+</body>
+
+</html>
